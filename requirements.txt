@@ -1,0 +1,10 @@
+tensorflow>=2.15
+fastapi>=0.110
+uvicorn[standard]>=0.27
+gradio>=4.0
+pillow>=10.0
+numpy>=1.24
+scikit-image>=0.22
+requests>=2.31
+python-multipart>=0.0.9
+

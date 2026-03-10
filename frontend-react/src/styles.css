@@ -1,0 +1,349 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #e5e7eb;
+  background: radial-gradient(circle at top left, #1f2937, #020617 55%);
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 32px 16px;
+}
+
+.app-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.2), transparent),
+    radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.22), transparent);
+  pointer-events: none;
+}
+
+.app-container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  padding: 32px 28px 36px 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+  z-index: 1;
+}
+
+.glass-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.85),
+    rgba(15, 23, 42, 0.7)
+  );
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(129, 140, 248, 0.7);
+  background: rgba(15, 23, 42, 0.7);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #a5b4fc;
+  margin-bottom: 12px;
+}
+
+.header-title {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #9ca3af;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.section-block {
+  margin-top: 24px;
+}
+
+.section-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  border-radius: 18px;
+  padding: 16px 16px 18px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.glass-card {
+  background: radial-gradient(
+      circle at top left,
+      rgba(129, 140, 248, 0.18),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.8);
+}
+
+.upload-card,
+.result-card,
+.action-card {
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.7);
+}
+
+.card-header {
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card-description {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.upload-dropzone {
+  margin-top: 10px;
+  border-radius: 14px;
+  border: 1px dashed rgba(148, 163, 184, 0.7);
+  background: radial-gradient(
+      circle at top right,
+      rgba(56, 189, 248, 0.18),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.75);
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.15s ease,
+    box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.upload-dropzone:hover {
+  border-color: rgba(129, 140, 248, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(59, 130, 246, 0.4);
+}
+
+.upload-placeholder {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.upload-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  margin-bottom: 6px;
+}
+
+.upload-hint {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.upload-preview {
+  display: block;
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-inline: auto;
+}
+
+.file-name {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.primary-button {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: #f9fafb;
+  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.55);
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    filter 0.12s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 22px 55px rgba(37, 99, 235, 0.7);
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+  box-shadow: none;
+}
+
+.spinner {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.spinner-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: white;
+  animation: spinner-bounce 0.9s infinite ease-in-out both;
+}
+
+.spinner-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.spinner-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes spinner-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.result-image-wrapper {
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  background: radial-gradient(
+    circle at top left,
+    rgba(31, 41, 55, 0.9),
+    rgba(15, 23, 42, 0.95)
+  );
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.result-placeholder {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.metric-card {
+  padding: 10px 12px 12px 12px;
+}
+
+.metric-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.metric-suffix {
+  margin-left: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.error-banner {
+  margin: 10px 0 0 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.45);
+  color: #fecaca;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 22px 16px 26px 16px;
+    border-radius: 18px;
+  }
+
+  .header-title {
+    font-size: 24px;
+  }
+}
+
