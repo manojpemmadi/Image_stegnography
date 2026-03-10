@@ -1,8 +1,8 @@
-## Deep Learning–Based Image Steganography Web Application
+## GAN–Based Image Steganography Web Application
 
 This project implements a **deep learning based image steganography** system that securely hides a **secret image inside a cover image**. The goal is to enable safe transmission of **sensitive visual data** such as medical records, confidential documents, forensic evidence, or satellite images over digital networks without revealing the presence of **hidden information**.
 
-The system uses a **Chroma-Warp Generative Adversarial Network (GAN)** architecture for **reversible image steganography**. Instead of modifying all **RGB channels**, the method converts images to the **YUV color space** and embeds secret information only in the **chrominance (U and V) channels**, while preserving the **luminance channel**. This approach reduces **visual distortion** and makes the hidden information **less detectable**.
+The system uses a **Generative Adversarial Network (GAN)** architecture for **reversible image steganography**. Instead of modifying all **RGB channels**, the method converts images to the **YUV color space** and embeds secret information only in the **chrominance (U and V) channels**, while preserving the **luminance channel**. This approach reduces **visual distortion** and makes the hidden information **less detectable**.
 
 The framework includes a **Secret Encoder**, **Generator (Embedding Network)**, **Decoder (Extraction Network)**, and **Discriminator**, which work together to generate **realistic stego images** and accurately recover both the **hidden secret image** and the **original cover image**. The system is implemented using **TensorFlow/Keras** for model training, **FastAPI** for the backend, and **React** for the frontend interface.
 
