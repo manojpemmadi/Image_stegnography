@@ -1,13 +1,10 @@
 ## Deep Learning–Based Image Steganography Web Application
 
-This project implements a **deep learning based image steganography system** that securely hides a **secret image** inside a **cover image** and then **reversibly** recovers both the secret and the original cover.  
-The system targets secure transmission of sensitive visual data such as **medical images, confidential documents, forensic evidence, and satellite imagery** over digital networks, while **hiding the very existence** of the secret information.
+This project implements a **deep learning based image steganography** system that securely hides a **secret image inside a cover image**. The goal is to enable safe transmission of **sensitive visual data** such as medical records, confidential documents, forensic evidence, or satellite images over digital networks without revealing the presence of **hidden information**.
 
-At its core, the project uses a **Chroma‑Warp Generative Adversarial Network (GAN)** architecture with a **YUV‑space, chrominance‑only embedding** strategy: the model converts images from RGB to YUV and embeds information **only in the U and V (chrominance) channels**, preserving the Y (luminance) channel to reduce visible distortion and make the hidden information much harder to detect.
+The system uses a **Chroma-Warp Generative Adversarial Network (GAN)** architecture for **reversible image steganography**. Instead of modifying all **RGB channels**, the method converts images to the **YUV color space** and embeds secret information only in the **chrominance (U and V) channels**, while preserving the **luminance channel**. This approach reduces **visual distortion** and makes the hidden information **less detectable**.
 
-The web application exposes this capability via a **FastAPI backend**, a **TensorFlow/Keras model layer**, and a **React + Vite single‑page frontend**.
-
----
+The framework includes a **Secret Encoder**, **Generator (Embedding Network)**, **Decoder (Extraction Network)**, and **Discriminator**, which work together to generate **realistic stego images** and accurately recover both the **hidden secret image** and the **original cover image**. The system is implemented using **TensorFlow/Keras** for model training, **FastAPI** for the backend, and **React** for the frontend interface.
 
 ## 1. High‑Level Architecture
 
