@@ -187,14 +187,14 @@ body {
 # ======================
 def build_interface() -> gr.Blocks:
     with gr.Blocks(
-        title="AI Image Steganography System",
+        title="GAN Based Image Steganography System",
     ) as demo:
         with gr.Row(elem_classes=["main-container"]):
             # Header
             gr.Markdown(
                 """
                 <div class="glass-card glass-card-light" style="padding: 1.5rem 1.75rem; margin-bottom: 1.75rem;">
-                  <div class="title-text">AI Image Steganography System</div>
+                  <div class="title-text">GAN Based Image Steganography System</div>
                   <div class="subtitle-text">
                     Hide a <strong>secret image</strong> inside a <strong>cover image</strong> using a GAN-based deep learning model,
                     then recover it with high fidelity. Explore how imperceptible steganography can be using PSNR and SSIM metrics.
